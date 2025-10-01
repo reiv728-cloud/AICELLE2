@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta name="description" content="An interactive journey through five generations of computer evolution, from vacuum tubes to artificial intelligence. Created by Casagda, Aicelle - BSTM-2C">
+    <meta name="keywords" content="computer evolution, computer history, vacuum tubes, transistors, integrated circuits, microprocessors, artificial intelligence, technology history">
+    <meta name="author" content="Casagda, Aicelle">
+    <title>The Evolution of Computers | Casagda, Aicelle - BSTM-2C</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&family=Electrolize&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Cursor Trail Effect -->
+    <canvas id="cursorCanvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="author-info">
+                <span class="author-name">Casagda, Aicelle</span>
+                <span class="author-section">BSTM-2C</span>
+            </div>
+            <div class="header-icon">💻</div>
+            <h1 class="glitch" data-text="The Evolution of Computers">The Evolution of Computers</h1>
+            <p class="subtitle">From Vacuum Tubes to Artificial Intelligence</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Generations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80+</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Innovation</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="timeline-nav">
+            <div class="nav-indicator" id="navIndicator"></div>
+            <button class="nav-btn active" data-generation="1">
+                <span class="btn-icon">📺</span>
+                <span class="btn-text">1st Gen</span>
+                <span class="btn-year">1940-1956</span>
+            </button>
+            <button class="nav-btn" data-generation="2">
+                <span class="btn-icon">⚡</span>
+                <span class="btn-text">2nd Gen</span>
+                <span class="btn-year">1956-1963</span>
+            </button>
+            <button class="nav-btn" data-generation="3">
+                <span class="btn-icon">🔌</span>
+                <span class="btn-text">3rd Gen</span>
+                <span class="btn-year">1964-1971</span>
+            </button>
+            <button class="nav-btn" data-generation="4">
+                <span class="btn-icon">🖥️</span>
+                <span class="btn-text">4th Gen</span>
+                <span class="btn-year">1971-Present</span>
+            </button>
+            <button class="nav-btn" data-generation="5">
+                <span class="btn-icon">🤖</span>
+                <span class="btn-text">5th Gen</span>
+                <span class="btn-year">1980-Beyond</span>
+            </button>
+        </nav>
+
+        <main id="content">
+            <!-- Generation 1 -->
+            <section class="generation-section active" data-generation="1">
+                <div class="generation-header">
+                    <h2>First Generation (1940–1956)</h2>
+                    <span class="tech-badge">Vacuum Tubes</span>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>🔧 Key Features</h3>
+                        <ul>
+                            <li><strong>Very large, heavy, room-sized machines</strong> - Occupied entire rooms and weighed several tons</li>
+                            <li><strong>High power consumption</strong> - Consumed lots of electricity, generated excessive heat (required air conditioning)</li>
+                            <li><strong>Machine language programming</strong> - Programmed using binary code (0s and 1s)</li>
+                            <li><strong>Primitive input/output</strong> - Used punched cards and paper tape for data entry and output</li>
+                            <li><strong>Slow processing speed</strong> - Limited computational capabilities compared to modern standards</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>👨‍💻 Inventors/Examples</h3>
+                        <ul>
+                            <li><strong>J. Presper Eckert & John Mauchly</strong> - ENIAC, UNIVAC</li>
+                            <li><strong>Howard Aiken</strong> - Mark I (Harvard Mark I)</li>
+                            <li><strong>IBM research teams</strong> - IBM-701, IBM-650</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💼 Business Applications</h3>
+                        <ul>
+                            <li><strong>Census data processing</strong> - US Census Bureau utilized UNIVAC for population data analysis</li>
+                            <li><strong>Military calculations</strong> - ENIAC performed artillery trajectory calculations</li>
+                            <li><strong>Scientific research</strong> - Atomic bomb simulations and complex mathematical computations</li>
+                            <li><strong>Basic record keeping</strong> - Large organizations began automating data storage</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generation 2 -->
+            <section class="generation-section" data-generation="2">
+                <div class="generation-header">
+                    <h2>Second Generation (1956–1963)</h2>
+                    <span class="tech-badge">Transistors</span>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>🔧 Key Features</h3>
+                        <ul>
+                            <li><strong>Smaller and more reliable</strong> - Transistors replaced vacuum tubes, reducing size significantly</li>
+                            <li><strong>Energy efficient</strong> - Lower power consumption, less heat generation (still required cooling)</li>
+                            <li><strong>Advanced programming languages</strong> - Introduction of assembly language and early high-level languages (COBOL, FORTRAN)</li>
+                            <li><strong>Improved operating systems</strong> - Batch processing and early multiprogramming capabilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>👨‍💻 Inventors/Examples</h3>
+                        <ul>
+                            <li><strong>John Bardeen, Walter Brattain, William Shockley</strong> - Invented the transistor at Bell Labs (1947)</li>
+                            <li><strong>IBM</strong> - IBM 1620, IBM 7094</li>
+                            <li><strong>CDC (Control Data Corporation)</strong> - CDC 1604, CDC 3600</li>
+                            <li><strong>UNIVAC</strong> - UNIVAC 1108</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💼 Business Applications</h3>
+                        <ul>
+                            <li><strong>Business automation</strong> - Payroll, inventory management, and billing systems</li>
+                            <li><strong>Banking automation</strong> - Account management and transaction processing</li>
+                            <li><strong>Airline reservation systems</strong> - SABRE (Semi-Automatic Business Research Environment)</li>
+                            <li><strong>Scientific and engineering calculations</strong> - Complex mathematical modeling</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generation 3 -->
+            <section class="generation-section" data-generation="3">
+                <div class="generation-header">
+                    <h2>Third Generation (1964–1971)</h2>
+                    <span class="tech-badge">Integrated Circuits</span>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>🔧 Key Features</h3>
+                        <ul>
+                            <li><strong>Integrated circuits</strong> - Multiple transistors integrated on a single silicon chip</li>
+                            <li><strong>Significantly smaller and faster</strong> - Enhanced reliability with lower maintenance requirements</li>
+                            <li><strong>Advanced multitasking</strong> - Multiprogramming, time-sharing, and remote processing capabilities</li>
+                            <li><strong>Improved user interfaces</strong> - Introduction of monitors and keyboards for direct interaction</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>👨‍💻 Inventors/Examples</h3>
+                        <ul>
+                            <li><strong>Jack Kilby (Texas Instruments) & Robert Noyce (Fairchild Semiconductor)</strong> - Co-inventors of the integrated circuit</li>
+                            <li><strong>IBM System/360</strong> - Revolutionary modular computer family</li>
+                            <li><strong>Honeywell-6000</strong> - Business and scientific computing</li>
+                            <li><strong>PDP-8</strong> - First commercially successful minicomputer</li>
+                            <li><strong>TDC-316</strong> - Process control computer</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💼 Business Applications</h3>
+                        <ul>
+                            <li><strong>Real-time data processing</strong> - Multi-user business applications with simultaneous access</li>
+                            <li><strong>Retail automation</strong> - Automated inventory management systems</li>
+                            <li><strong>Banking infrastructure</strong> - ATM networks and centralized bank data processing</li>
+                            <li><strong>Insurance and airline management</strong> - Comprehensive management systems for complex operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generation 4 -->
+            <section class="generation-section" data-generation="4">
+                <div class="generation-header">
+                    <h2>Fourth Generation (1971–Present)</h2>
+                    <span class="tech-badge">Microprocessors</span>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>🔧 Key Features</h3>
+                        <ul>
+                            <li><strong>Microprocessor technology</strong> - All computer components integrated on a single chip using VLSI</li>
+                            <li><strong>Personal computing revolution</strong> - Desktop computers, laptops, and eventually smartphones</li>
+                            <li><strong>Graphical user interfaces (GUIs)</strong> - User-friendly visual interfaces replacing command-line systems</li>
+                            <li><strong>Internet and multimedia</strong> - Global connectivity and rich media capabilities</li>
+                            <li><strong>Advanced processing</strong> - Pipeline processing and distributed operating systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>👨‍💻 Inventors/Examples</h3>
+                        <ul>
+                            <li><strong>Ted Hoff & Federico Faggin</strong> - Intel 4004 (first commercial microprocessor, 1971)</li>
+                            <li><strong>Steve Wozniak & Steve Jobs</strong> - Apple II (1977)</li>
+                            <li><strong>IBM PC team</strong> - IBM Personal Computer (1981)</li>
+                            <li><strong>Seymour Cray</strong> - CRAY-1 supercomputer</li>
+                            <li><strong>DEC</strong> - DEC 10, CRAY-X-MP</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💼 Business Applications</h3>
+                        <ul>
+                            <li><strong>Office automation</strong> - Word processing, spreadsheets, presentation software</li>
+                            <li><strong>Personal and business computing</strong> - Widespread adoption of PCs in homes and offices</li>
+                            <li><strong>Networking and e-commerce</strong> - Internet-based business operations and online transactions</li>
+                            <li><strong>Creative industries</strong> - Graphic design, video editing, multimedia production</li>
+                            <li><strong>Enterprise software</strong> - Comprehensive business management systems (ERP, CRM)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generation 5 -->
+            <section class="generation-section" data-generation="5">
+                <div class="generation-header">
+                    <h2>Fifth Generation (1980–Present & Beyond)</h2>
+                    <span class="tech-badge">Artificial Intelligence</span>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>🔧 Key Features</h3>
+                        <ul>
+                            <li><strong>Ultra Large Scale Integration (ULSI)</strong> - Billions of transistors on a single chip</li>
+                            <li><strong>Parallel processing</strong> - Multiple processors working simultaneously for enhanced performance</li>
+                            <li><strong>AI and machine learning</strong> - Computers that can learn, adapt, and make decisions</li>
+                            <li><strong>Quantum computing</strong> - Experimental systems using quantum mechanics for computation</li>
+                            <li><strong>Advanced interfaces</strong> - Natural language processing, voice recognition, touch interfaces</li>
+                            <li><strong>Ubiquitous computing</strong> - Cloud computing, IoT, wearable devices</li>
+                            <li><strong>Massive storage and speed</strong> - Terabytes of storage with ultra-fast processing capabilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>👨‍💻 Inventors/Examples</h3>
+                        <ul>
+                            <li><strong>AI Pioneers</strong> - Marvin Minsky, John McCarthy, Geoffrey Hinton</li>
+                            <li><strong>IBM Watson</strong> - AI system capable of natural language question answering</li>
+                            <li><strong>Google DeepMind</strong> - Advanced AI for game playing, protein folding, and more</li>
+                            <li><strong>Quantum computers</strong> - IBM Q, Google Sycamore</li>
+                            <li><strong>Contemporary devices</strong> - Modern laptops, tablets, smartphones with AI capabilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>💼 Business Applications</h3>
+                        <ul>
+                            <li><strong>Big data analytics</strong> - Processing and analyzing massive datasets for business insights</li>
+                            <li><strong>AI-driven automation</strong> - Chatbots, virtual assistants (Siri, Alexa, Google Assistant)</li>
+                            <li><strong>Robotics</strong> - Automated manufacturing, surgical robots, warehouse automation</li>
+                            <li><strong>Internet of Things (IoT)</strong> - Smart homes, connected devices, industrial IoT</li>
+                            <li><strong>Cloud services</strong> - Scalable computing resources and software-as-a-service (SaaS)</li>
+                            <li><strong>Advanced security</strong> - Biometric authentication, AI-powered threat detection</li>
+                            <li><strong>Autonomous vehicles</strong> - Self-driving cars and trucks</li>
+                            <li><strong>Healthcare diagnostics</strong> - AI-assisted medical imaging, drug discovery, personalized medicine</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="summary-section">
+            <h2>Timeline Summary</h2>
+            <div class="timeline-table">
+                <div class="timeline-row header">
+                    <div>Generation</div>
+                    <div>Period</div>
+                    <div>Technology</div>
+                    <div>Key Innovation</div>
+                </div>
+                <div class="timeline-row">
+                    <div><strong>First</strong></div>
+                    <div>1940–1956</div>
+                    <div>Vacuum Tubes</div>
+                    <div>Electronic computing begins</div>
+                </div>
+                <div class="timeline-row">
+                    <div><strong>Second</strong></div>
+                    <div>1956–1963</div>
+                    <div>Transistors</div>
+                    <div>Smaller, more reliable systems</div>
+                </div>
+                <div class="timeline-row">
+                    <div><strong>Third</strong></div>
+                    <div>1964–1971</div>
+                    <div>Integrated Circuits</div>
+                    <div>Multiple components on single chip</div>
+                </div>
+                <div class="timeline-row">
+                    <div><strong>Fourth</strong></div>
+                    <div>1971–Present</div>
+                    <div>Microprocessors</div>
+                    <div>Personal computing revolution</div>
+                </div>
+                <div class="timeline-row">
+                    <div><strong>Fifth</strong></div>
+                    <div>1980–Present</div>
+                    <div>AI & Quantum</div>
+                    <div>Intelligent, adaptive systems</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="insights-section">
+            <h2>Key Observations</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>📉 Progression Patterns</h3>
+                    <ul>
+                        <li><strong>Size reduction</strong> - From room-sized machines to pocket-sized devices</li>
+                        <li><strong>Power efficiency</strong> - Dramatic decrease in energy consumption per operation</li>
+                        <li><strong>Speed increase</strong> - Exponential growth in processing capabilities (Moore's Law)</li>
+                        <li><strong>Cost reduction</strong> - Computing power became accessible to individuals</li>
+                        <li><strong>User accessibility</strong> - From specialized operators to universal user-friendly interfaces</li>
+                    </ul>
+                </div>
+
+                <div class="insight-card">
+                    <h3>🌍 Impact on Society</h3>
+                    <ul>
+                        <li><strong>Democratization of computing</strong> - Technology accessible to billions worldwide</li>
+                        <li><strong>Digital transformation</strong> - Fundamental changes in how businesses operate</li>
+                        <li><strong>Global connectivity</strong> - Internet enabling instant worldwide communication</li>
+                        <li><strong>Automation and AI</strong> - Reshaping employment and industry landscapes</li>
+                        <li><strong>Innovation acceleration</strong> - Rapid technological advancement in all fields</li>
+                    </ul>
+                </div>
+
+                <div class="insight-card">
+                    <h3>🚀 Future Directions</h3>
+                    <ul>
+                        <li><strong>Quantum computing</strong> - Solving currently impossible computational problems</li>
+                        <li><strong>Artificial General Intelligence (AGI)</strong> - AI systems with human-level reasoning</li>
+                        <li><strong>Brain-computer interfaces</strong> - Direct neural connections to computing systems</li>
+                        <li><strong>Biotechnology integration</strong> - Merging biological and computational systems</li>
+                        <li><strong>Sustainable computing</strong> - Energy-efficient and environmentally conscious technology</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>The Evolution of Computers: A journey from massive vacuum tube machines to intelligent, interconnected devices</p>
+                    <p class="footer-copyright">© 2025 Computer Evolution Timeline | Educational Resource</p>
+                    <p class="footer-author">Created by: <strong>Casagda, Aicelle</strong> | <strong>BSTM-2C</strong></p>
+                </div>
+                <button class="scroll-top" id="scrollTop" title="Back to top">
+                    <span>↑</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
